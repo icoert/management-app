@@ -11,8 +11,8 @@
     "format": "prettier --write 'src/**/*.{js,ts}'"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Silviu Vijiala",
+  "license": "MIT",
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
