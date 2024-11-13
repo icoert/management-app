@@ -3,6 +3,10 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import { graphqlHTTP } from "express-graphql";
 import schema from "./schema/schema";
+import colors from "colors";
+import conenctDb from "./config/db";
+
+colors.enable();
 
 dotenv.config();
 
@@ -12,6 +16,9 @@ const PORT = process.env.PORT || 3000;
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+conenctDb();
+
 app.use(
   "/graphql",
   graphqlHTTP({
